@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Enigma</string>
+    <string name="title_activity_home_page">Enigma</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_map">Map</string>
+    <string name="Profile">Profile</string>
+    <string name="CurrentLocation">Current Location</string>
+
 </resources>
