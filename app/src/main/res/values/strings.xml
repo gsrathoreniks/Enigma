@@ -9,5 +9,7 @@
     <string name="title_activity_map">Map</string>
     <string name="Profile">Profile</string>
     <string name="CurrentLocation">Current Location</string>
+    <string name="title_activity_explore">Explore</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>

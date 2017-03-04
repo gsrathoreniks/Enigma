@@ -81,16 +81,10 @@ public class HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_map) {
+        if (id == R.id.nav_explore) {
             // Handles the Location of the user.
-            Intent d = new Intent(this, map.class);
+            Intent d = new Intent(this, Explore.class);
             startActivity(d);
-
-            if(id== R.id.nav_profile){
-
-            }
-
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
