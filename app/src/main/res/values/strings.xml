@@ -10,6 +10,7 @@
     <string name="Profile">Profile</string>
     <string name="CurrentLocation">Current Location</string>
     <string name="title_activity_explore">Explore</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_locate_place">Map</string>
+    <string name="google_maps_key">AIzaSyBjtVDhMSL6DJ0cQoG4BgZpbjVfUtMlLL0</string>
 
 </resources>
