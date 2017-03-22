@@ -11,7 +11,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 public class Splashscreen extends AppCompatActivity {
 
@@ -30,11 +29,6 @@ public class Splashscreen extends AppCompatActivity {
         Animation anim= AnimationUtils.loadAnimation(this,R.anim.fade_in);
         imageView.setAnimation(anim);
 */
-        CircularProgressBar circularProgressBar = (CircularProgressBar)findViewById(R.id.progressBar);
-        CircularProgressBar circularProgressBar3 = (CircularProgressBar)findViewById(R.id.progressBar3);
-        int animationDuration = 3000; // 2500ms = 2,5s
-        circularProgressBar.setProgressWithAnimation(100, animationDuration);
-        circularProgressBar3.setProgressWithAnimation(100, animationDuration);
 
         new Handler().postDelayed(new Runnable() {
 
@@ -42,10 +36,10 @@ public class Splashscreen extends AppCompatActivity {
             public void run() {
                 Intent i = new Intent(Splashscreen.this, HomePage.class);
                 startActivity(i);
-
             }
         },3500);
 
 
     }
 }
+

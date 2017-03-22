@@ -46,17 +46,21 @@
         </activity>
         <activity android:name=".SignUp">
         </activity>
-        <activity
-            android:name=".Explore"
-            android:label="@string/title_activity_explore"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
         <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".socio_conomic">
+        </activity>
+        <activity
+            android:name=".Individual"
+            android:label="@string/title_activity_individual"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

@@ -10,49 +10,6 @@
     android:orientation="vertical"
     tools:context="rathore.gajendra.enigma.Splashscreen">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:paddingTop="35dp"
-        android:src="@drawable/inc_ind"
-        android:id="@+id/imageView3"/>
-
-    <RelativeLayout android:layout_width="match_parent"
-                    android:gravity="center"
-                    android:id="@+id/idRv"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/textView2"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginBottom="30dp">
-
-
-        <com.mikhaellopez.circularprogressbar.CircularProgressBar
-            android:layout_width="170dp"
-            android:id="@+id/progressBar"
-            android:layout_height="wrap_content"
-            app:cpb_background_progressbar_color="#ffffff"
-            app:cpb_background_progressbar_width="8dp"
-            app:cpb_progressbar_color="#138808"
-            app:cpb_progressbar_width="8dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
-
-        <com.mikhaellopez.circularprogressbar.CircularProgressBar
-            android:layout_width="200dp"
-            android:id="@+id/progressBar3"
-            android:layout_height="wrap_content"
-            app:cpb_background_progressbar_color="#ffffff"
-            app:cpb_background_progressbar_width="8dp"
-            app:cpb_progressbar_color="#ff9933"
-            app:cpb_progressbar_width="8dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
-
-
-    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
