@@ -487,8 +487,9 @@ public class HomePage extends AppCompatActivity
 
         if (id == R.id.nav_explore) {
             // Handles the Location of the user.
-            //Intent d = new Intent(this, .class);
-            //startActivity(d);
+            Intent d = new Intent(this, Weather.class);
+            startActivity(d);
+
         }
         if (id == R.id.nav_profile) {
             // Handles the Location of the user.
