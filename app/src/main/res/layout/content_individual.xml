@@ -9,10 +9,47 @@
     tools:context="rathore.gajendra.enigma.Individual"
     tools:showIn="@layout/activity_individual">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="  Hello"/>
 
-</android.support.v4.widget.NestedScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:weightSum="2"
+                >
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_weight="1"
+                android:backgroundTint="#938d92e1"
+                android:padding="20dp"
+
+                >
+                <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/ic_sunny"
+
+                />
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_weight="1"
+                android:backgroundTint="#a8f1936a"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27"
+                    android:padding="25dp"
+                    android:textColor="#FFF"
+                     android:textSize="80dp" />
+            </android.support.v7.widget.CardView>
+            </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+

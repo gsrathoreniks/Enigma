@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="rathore.gajendra.enigma.profile">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/header"
+            android:foreground="@drawable/header_trans"
+            android:id="@+id/imageView2"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favourites\n -"
+            android:padding="10dp"
+            android:textSize="10dp"
+            android:textAllCaps="true"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp"
+            android:textAlignment="center"
+            android:id="@+id/textViewFav"
+            android:layout_alignBaseline="@+id/textViewVisited"
+            android:layout_alignBottom="@+id/textViewVisited"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/textViewVisited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="131dp"
+            android:textSize="10dp"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:layout_marginRight="131dp"
+            android:layout_marginTop="194dp"
+            android:padding="10dp"
+            android:text="Visited\n -" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_circle_filled"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#8BC34A"
+        android:id="@+id/circularImageView"
+        android:layout_marginBottom="22dp"
+        android:layout_alignBottom="@+id/textViewEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:id="@+id/floatingActionButton"
+            android:layout_alignTop="@+id/circularImageView"
+            android:layout_alignRight="@+id/textViewFav"
+            android:layout_alignEnd="@+id/textViewFav" />
+        <!--UPPER CONTENT FOR PROFILE PIK AND DETAILS-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9766227508"
+            android:textSize="16dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="280dp"
+            android:id="@+id/textViewContact"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="16dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="260dp"
+            android:text="sakshi25amrutkar@gmail.com" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/cardViewFav"
+        android:layout_below="@+id/textViewContact">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="2dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:text="Favourites"/>
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="155dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/rect_back" />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="155dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/rect_back"/>
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="155dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/rect_back"/>
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="155dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/rect_back" />
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="155dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/rect_back"/>
+        </LinearLayout>
+        </HorizontalScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="180dp"
+            android:text="View All ->"/>
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/cardViewFav">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="2dp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:text="Visited"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="155dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/rect_back"
+                    android:layout_gravity="center" />
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="155dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/rect_back"
+                    android:layout_gravity="center" />
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="155dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/rect_back"
+                    android:layout_gravity="center" />
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="155dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/rect_back"
+                    android:layout_gravity="center" />
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="155dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/rect_back"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="180dp"
+                android:text="View All ->"/>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

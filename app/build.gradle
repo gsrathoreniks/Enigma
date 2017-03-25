@@ -33,6 +33,7 @@ dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'org.apache.httpcomponents:httpcore:4.4.1'
     compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'com.mikhaellopez:circularimageview:3.0.2'
     testCompile 'junit:junit:4.12'
 }
 

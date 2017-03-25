@@ -496,6 +496,11 @@ public class HomePage extends AppCompatActivity
             Intent d = new Intent(this, Login.class);
             startActivity(d);
         }
+        if (id == R.id.nav_favourites) {
+            // Handles the Location of the user.
+            Intent d = new Intent(this, profile.class);
+            startActivity(d);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
