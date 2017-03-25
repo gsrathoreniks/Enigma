@@ -21,7 +21,6 @@
             android:layout_height="230dp"
             android:scaleType="fitXY"
             android:src="@drawable/header"
-            android:foreground="@drawable/header_trans"
             android:id="@+id/imageView2"
             android:layout_alignParentTop="true" />
         <TextView
