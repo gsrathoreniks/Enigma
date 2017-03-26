@@ -21,9 +21,6 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-    buildTypes.each {
-        it.buildConfigField 'String', '3f27023196cdf6cdfb855fc4d71e1b0a', "\"API_KEY\""
-    }
 }
 android {
     useLibrary 'org.apache.http.legacy'
