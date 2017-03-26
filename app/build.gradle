@@ -21,9 +21,6 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-    buildTypes.each {
-        it.buildConfigField 'String', '3f27023196cdf6cdfb855fc4d71e1b0a', "\"API_KEY\""
-    }
 }
 android {
     useLibrary 'org.apache.http.legacy'
@@ -39,8 +36,10 @@ dependencies {
     compile 'org.apache.httpcomponents:httpcore:4.4.1'
     compile 'org.apache.httpcomponents:httpclient:4.5'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.google.firebase:firebase-auth:9.4.0'
     testCompile 'junit:junit:4.12'
 }
+apply plugin: 'com.google.gms.google-services'
 
 
 
