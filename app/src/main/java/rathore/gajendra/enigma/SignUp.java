@@ -24,6 +24,8 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity {
 
@@ -33,6 +35,7 @@ public class SignUp extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
     ImageView googleSignupbtn;
+    DatabaseReference root;
 
     private static final int RC_SIGN_IN=1;
     private GoogleApiClient mGoogleApiClient;
@@ -50,7 +53,7 @@ public class SignUp extends AppCompatActivity {
         emailReg=(EditText)findViewById(R.id.reg_email);
         passReg=(EditText)findViewById(R.id.reg_pass);
         firebaseAuth=FirebaseAuth.getInstance();
-
+        root= FirebaseDatabase.getInstance().getReference().child("User");
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
