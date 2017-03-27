@@ -15,6 +15,7 @@
         android:layout_alignParentStart="true">
     <RelativeLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="match_parent"
@@ -56,8 +57,8 @@
             android:text="Visited\n -" />
 
     <com.mikhaellopez.circularimageview.CircularImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:background="@drawable/ic_circle_filled"
         app:civ_border_color="#000000"
         app:civ_border_width="2dp"
@@ -65,10 +66,9 @@
         app:civ_shadow_radius="10"
         app:civ_shadow_color="#8BC34A"
         android:id="@+id/circularImageView"
-        android:layout_marginBottom="22dp"
         android:layout_alignBottom="@+id/textViewEmail"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/cardViewFav"
+        android:layout_alignStart="@+id/cardViewFav"/>
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,63 +102,73 @@
             android:text="sakshi25amrutkar@gmail.com" />
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="215dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_centerVertical="true"
         android:id="@+id/cardViewFav"
         android:layout_below="@+id/textViewContact">
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="2dp"
-            android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:text="Favourites"/>
+            android:layout_height="30dp"
+            android:background="#e2dfdf">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:text="Favourites"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:scrollbars="none">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
             <ImageView
-                android:layout_width="250dp"
-                android:layout_height="155dp"
-                android:layout_margin="2dp"
-                android:src="@drawable/rect_back" />
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bs_one"
+                android:scaleType="fitXY"
+                android:layout_marginRight="5dp"/>
             <ImageView
-                android:layout_width="250dp"
-                android:layout_height="155dp"
-                android:layout_margin="2dp"
-                android:src="@drawable/rect_back"/>
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bs_two"
+                android:scaleType="fitXY"
+                android:layout_marginRight="5dp"/>
             <ImageView
-                android:layout_width="250dp"
-                android:layout_height="155dp"
-                android:layout_margin="2dp"
-                android:src="@drawable/rect_back"/>
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="155dp"
-                android:layout_margin="2dp"
-                android:src="@drawable/rect_back" />
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="155dp"
-                android:layout_margin="2dp"
-                android:src="@drawable/rect_back"/>
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bs_three"
+                android:scaleType="fitXY"
+                android:layout_marginRight="5dp"/>
         </LinearLayout>
         </HorizontalScrollView>
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="180dp"
-            android:text="View All ->"/>
+            android:layout_height="30dp"
+            android:background="#e2dfdf"
+            android:layout_gravity="bottom">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="VIEW ALL"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+
+
     </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -186,13 +196,12 @@
                     android:layout_width="250dp"
                     android:layout_height="155dp"
                     android:layout_margin="2dp"
-                    android:src="@drawable/rect_back"
+                    
                     android:layout_gravity="center" />
                 <ImageView
                     android:layout_width="250dp"
                     android:layout_height="155dp"
                     android:layout_margin="2dp"
-                    android:src="@drawable/rect_back"
                     android:layout_gravity="center" />
                 <ImageView
                     android:layout_width="250dp"
@@ -222,8 +231,7 @@
                 android:layout_marginTop="180dp"
                 android:text="View All ->"/>
         </android.support.v7.widget.CardView>
-
+       
     </RelativeLayout>
-
     </ScrollView>
 </RelativeLayout>
