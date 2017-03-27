@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="rathore.gajendra.enigma.feedback">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ecotour_logo"/>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/feedback_rect_back"
+                        android:text="What do you think about our app?"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                    <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating"
+                        android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+               <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                   android:layout_marginRight="5dp"
+                android:layout_marginTop="30dp">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="5dp"
+
+                       android:background="@drawable/feedback_rect_back"
+                       android:textSize="16dp"
+                       android:textColor="#ffffff"
+                       android:text="What would you like to share with us?"/>
+
+                   <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                    android:hint="Your Thoughts ..."
+                       android:layout_marginTop="35dp"
+                    android:textSize="14dp"/>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="#ffffff"
+                android:background="#c40f86ab"
+                android:layout_marginTop="35dp"/>
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/circle_for_feedback"
+                android:layout_marginTop="35dp"
+                android:padding="25dp"
+                android:src="@drawable/ic_check"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

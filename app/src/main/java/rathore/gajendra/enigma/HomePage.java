@@ -487,6 +487,8 @@ public class HomePage extends AppCompatActivity
 
         if (id == R.id.nav_explore) {
             // Handles the Location of the user.
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
             Intent d = new Intent(this, Weather.class);
             startActivity(d);
 
@@ -499,6 +501,11 @@ public class HomePage extends AppCompatActivity
         if (id == R.id.nav_favourites) {
             // Handles the Location of the user.
             Intent d = new Intent(this, profile.class);
+            startActivity(d);
+        }
+        if (id == R.id.nav_visited) {
+            // Handles the Location of the user.
+            Intent d = new Intent(this, feedback.class);
             startActivity(d);
         }
 
