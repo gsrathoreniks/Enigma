@@ -89,12 +89,14 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:id="@+id/facebook_login"
                     android:src="@drawable/facebook_circle"
                     android:layout_marginRight="20dp"/>
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:id="@+id/googleBtn"
                     android:src="@drawable/google_circle"
                     android:layout_marginRight="20dp"/>
 
