@@ -19,7 +19,12 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/ecotour_logo"/>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ECOTOUR"
+                    android:textAlignment="center"
+                    android:textSize="25dp"/>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -52,34 +57,26 @@
                <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                   android:layout_marginRight="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="30dp">
                    <TextView
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:padding="5dp"
-
                        android:background="@drawable/feedback_rect_back"
                        android:textSize="16dp"
                        android:textColor="#ffffff"
                        android:text="What would you like to share with us?"/>
-
                    <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                        android:layout_marginLeft="5dp"
                        android:layout_marginRight="5dp"
                     android:hint="Your Thoughts ..."
-                       android:layout_marginTop="35dp"
-                    android:textSize="14dp"/>
+                       android:id="@+id/appReviews"
+                       android:layout_marginTop="35dp"/>
             </android.support.v7.widget.CardView>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:textColor="#ffffff"
-                android:background="#c40f86ab"
-                android:layout_marginTop="35dp"/>
+
             <ImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
@@ -87,6 +84,7 @@
                 android:background="@drawable/circle_for_feedback"
                 android:layout_marginTop="35dp"
                 android:padding="25dp"
+                android:id="@+id/btnReviewSubmit"
                 android:src="@drawable/ic_check"
                 android:layout_gravity="center"/>
         </LinearLayout>
