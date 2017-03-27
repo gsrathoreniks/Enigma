@@ -44,4 +44,6 @@
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@drawable/ic_favorite_border_black_24d"/>
 
+
+
 </android.support.design.widget.CoordinatorLayout>

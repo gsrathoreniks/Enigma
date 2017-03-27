@@ -1,5 +1,6 @@
 package rathore.gajendra.enigma;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -7,7 +8,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 
 public class Individual extends AppCompatActivity {
     int a=0;
@@ -29,6 +33,35 @@ public class Individual extends AppCompatActivity {
         stars3=(ImageView)findViewById(R.id.star3);
         stars4=(ImageView)findViewById(R.id.star4);
         stars5=(ImageView)findViewById(R.id.star5);
+
+        //Map
+
+        TextView take =(TextView) findViewById(R.id.takemethere);
+         final TextView lat= (TextView)findViewById(R.id.e_lat);
+        final TextView lng= (TextView)findViewById(R.id.e_lng);
+
+        take.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                double lati ;
+                double log;
+
+               lati  = Double.parseDouble(lat.getText().toString());
+                log  = Double.parseDouble(lng.getText().toString());
+
+
+                Intent intent = new Intent(getBaseContext(), MapsActivity.class);
+
+                // Passing latitude and longitude to the MapActiv
+                intent.putExtra("lat",lati);
+                intent.putExtra("lng",log);
+
+                startActivity(intent);
+
+
+            }
+        });
 
         stars1.setOnClickListener(new View.OnClickListener() {
             @Override

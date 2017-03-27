@@ -19,7 +19,7 @@
             android:layout_margin="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:orientation="vertical"
                 android:gravity="center_vertical">
                 <LinearLayout
@@ -49,11 +49,33 @@
                         android:text="Area  : "
                         android:textAlignment="viewEnd"/>
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="10 kmsq"
                         android:paddingLeft="5dp"
                         android:id="@+id/tv_area"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26.5775"
+                    android:id="@+id/e_lat"
+                    android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="93.1711"
+                        android:id="@+id/e_lng"
+                        android:visibility="gone"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -119,6 +141,7 @@
                 android:text="VIEW MAP"
                 android:padding="8dp"
                 android:gravity="center"
+                android:id="@+id/takemethere"
                 android:textColor="#ffffff"
                 android:background="#b3000000"
                 android:layout_gravity="bottom"/>
