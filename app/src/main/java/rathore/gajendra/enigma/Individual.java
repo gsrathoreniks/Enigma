@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Individual extends AppCompatActivity {
     int a=0;
@@ -21,6 +22,55 @@ public class Individual extends AppCompatActivity {
         AppBarLayout appBarLayout=(AppBarLayout)findViewById(R.id.app_bar);
         appBarLayout.setBackgroundResource(R.drawable.bs_two);
         setTitle(title);
+
+        final ImageView stars1,stars2,stars3,stars4,stars5;
+        stars1=(ImageView)findViewById(R.id.star1);
+        stars2=(ImageView)findViewById(R.id.star2);
+        stars3=(ImageView)findViewById(R.id.star3);
+        stars4=(ImageView)findViewById(R.id.star4);
+        stars5=(ImageView)findViewById(R.id.star5);
+
+        stars1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stars1.setImageResource(R.drawable.ic_star);
+            }
+        });
+        stars2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stars1.setImageResource(R.drawable.ic_star);
+                stars2.setImageResource(R.drawable.ic_star);
+            }
+        });
+        stars3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stars1.setImageResource(R.drawable.ic_star);
+                stars2.setImageResource(R.drawable.ic_star);
+                stars3.setImageResource(R.drawable.ic_star);
+
+            }
+        });
+        stars4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stars1.setImageResource(R.drawable.ic_star);
+                stars2.setImageResource(R.drawable.ic_star);
+                stars3.setImageResource(R.drawable.ic_star);
+                stars4.setImageResource(R.drawable.ic_star);
+            }
+        });
+        stars5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stars1.setImageResource(R.drawable.ic_star);
+                stars2.setImageResource(R.drawable.ic_star);
+                stars3.setImageResource(R.drawable.ic_star);
+                stars4.setImageResource(R.drawable.ic_star);
+                stars5.setImageResource(R.drawable.ic_star);
+            }
+        });
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
