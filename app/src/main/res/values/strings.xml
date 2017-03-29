@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Enigma</string>
-    <string name="title_activity_home_page">Enigma</string>
+    <string name="app_name">Ecotour</string>
+    <string name="title_activity_home_page">Ecotour</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -5,6 +5,9 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "rathore.gajendra.enigma"
+    }
+    defaultConfig {
+        applicationId "rathore.gajendra.enigma"
         minSdkVersion 16
         targetSdkVersion 25
         multiDexEnabled = true
