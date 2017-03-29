@@ -177,6 +177,7 @@
                         android:layout_height="match_parent"
                         android:padding="28dp"
                         android:src="@drawable/ic_cafe"
+                        android:id="@+id/cafeVeiw"
                         android:layout_weight="1"
                         android:background="@drawable/ic_circle_filled"/>
                     <ImageView
@@ -185,12 +186,14 @@
                         android:padding="28dp"
                         android:src="@drawable/ic_restaurant"
                         android:layout_weight="1"
+                        android:id="@+id/restraurantVeiw"
                         android:background="@drawable/ic_circle_filled"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_hotel"
                         android:layout_weight="1"
+                        android:id="@+id/hotelView"
                         android:paddingLeft="28dp"
                         android:paddingRight="28dp"
                         android:background="@drawable/ic_circle_filled"/>
@@ -230,6 +233,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:padding="28dp"
+                        android:id="@+id/hospitalVeiw"
                         android:src="@drawable/ic_hospital"
                         android:background="@drawable/ic_circle_filled"/>
                     <ImageView
@@ -237,6 +241,7 @@
                         android:layout_height="100dp"
                         android:src="@drawable/ic_money"
                         android:paddingLeft="28dp"
+                        android:id="@+id/atmVeiw"
                         android:paddingRight="28dp"
                         android:background="@drawable/ic_circle_filled"/>
                 </LinearLayout>
@@ -274,13 +279,14 @@
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
+                android:id="@+id/profilepikIndividual"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 android:src="@drawable/bs_one"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Prajakta Awaghade"
+                android:id="@+id/tv_name_individual"
                 android:textAlignment="center"
                 android:layout_marginTop="5dp"/>
 
@@ -323,14 +329,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Awesome"
+                    android:id="@+id/howsThis"
                     android:textAlignment="center"/>
+
                 <EditText
+                    android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:hint="  Tell us what you think !!!"/>
+                    android:hint="  Tell us what you think !!!" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

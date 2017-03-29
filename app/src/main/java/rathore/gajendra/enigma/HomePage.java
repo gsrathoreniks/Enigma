@@ -16,6 +16,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ImageView img1;
@@ -34,7 +41,8 @@ public class HomePage extends AppCompatActivity
     ImageView img14;
     ImageView img15;
     CardView cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10,cv11,cv12,cv13,cv14,cv15;
-
+    FirebaseAuth firebaseAuth;
+    DatabaseReference root;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -485,25 +493,21 @@ public class HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_explore) {
+        if (id == R.id.nav_bookRide) {
             // Handles the Location of the user.
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
-            Intent d = new Intent(this, Weather.class);
-            startActivity(d);
 
         }
         if (id == R.id.nav_profile) {
             // Handles the Location of the user.
-            Intent d = new Intent(this, Login.class);
+            Intent d = new Intent(this, profile.class);
             startActivity(d);
         }
         if (id == R.id.nav_favourites) {
             // Handles the Location of the user.
-            Intent d = new Intent(this, profile.class);
-            startActivity(d);
         }
-        if (id == R.id.nav_visited) {
+        if (id == R.id.nav_feedback) {
             // Handles the Location of the user.
             Intent d = new Intent(this, feedback.class);
             startActivity(d);

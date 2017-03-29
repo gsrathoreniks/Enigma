@@ -27,11 +27,17 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SignUp extends AppCompatActivity {
 
     Button btnRegister;
     EditText emailReg;
     EditText passReg;
+
+    EditText fullnameReg;
+    EditText contactReg;
 
     FirebaseAuth firebaseAuth;
     ImageView googleSignupbtn;
@@ -49,6 +55,8 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        fullnameReg=(EditText)findViewById(R.id.reg_fullName);
+        contactReg=(EditText)findViewById(R.id.reg_contact);
         btnRegister=(Button)findViewById(R.id.btnRegister);
         emailReg=(EditText)findViewById(R.id.reg_email);
         passReg=(EditText)findViewById(R.id.reg_pass);
@@ -68,9 +76,16 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         if(task.isSuccessful()){
-                            Toast.makeText(SignUp.this, "Registration Successful !!!", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(SignUp.this,Login.class));
-                        }
+                            if(fullnameReg.getText().toString().equals("")&&contactReg.getText().toString().equals("")){
+                                Toast.makeText(SignUp.this, "All Fields are mandatory.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+
+                                Toast.makeText(SignUp.this, "Registration Successful !!!", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(SignUp.this,Login.class));
+
+                            }
+}
                         else{
                             Toast.makeText(SignUp.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }

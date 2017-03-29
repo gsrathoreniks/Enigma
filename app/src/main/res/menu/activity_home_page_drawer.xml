@@ -12,18 +12,17 @@
             android:icon="@drawable/ic_favorite"
             android:title="Favourites"/>
         <item
-            android:id="@+id/nav_explore"
-            android:icon="@drawable/ic_explore"
-            android:title="Explore"/>
-        <item
             android:id="@+id/nav_visited"
             android:icon="@drawable/ic_recent"
             android:title="Recent visits"/>
-
         <item
             android:id="@+id/nav_bookRide"
             android:icon="@drawable/ic_ride"
             android:title="Book a ride"/>
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_explore"
+            android:title="Feedback"/>
     </group>
 
 </menu>
