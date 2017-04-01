@@ -1,7 +1,10 @@
 package rathore.gajendra.enigma;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,13 +13,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
+import java.util.Iterator;
 
 
 public class Individual extends AppCompatActivity {
@@ -32,6 +38,8 @@ public class Individual extends AppCompatActivity {
     ImageView imgprofpik;
     FirebaseAuth firebaseAuth;
     DatabaseReference root;
+    Context context=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +49,7 @@ public class Individual extends AppCompatActivity {
         String title = getIntent().getExtras().getString("name");
         toolbar.setTitle(title);
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);
-        appBarLayout.setBackgroundResource(R.drawable.bs);
+        appBarLayout.setBackgroundResource(R.drawable.bs_two);
         imgprofpik = (ImageView) findViewById(R.id.profilepikIndividual);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(title);
@@ -50,7 +58,6 @@ public class Individual extends AppCompatActivity {
         tv_name = (TextView) findViewById(R.id.tv_name_individual);
         tvAbout = (TextView) findViewById(R.id.tv_about);
         tv_name.setText(firebaseAuth.getCurrentUser().getDisplayName());
-
         final ImageView stars1, stars2, stars3, stars4, stars5;
         stars1 = (ImageView) findViewById(R.id.star1);
         stars2 = (ImageView) findViewById(R.id.star2);
@@ -127,7 +134,7 @@ public class Individual extends AppCompatActivity {
 
                 Intent intent = new Intent(getBaseContext(), MapsActivity.class);
 
-                // Passing latitude and longitude to the MapActiv
+                // Passing latitude and longitude to the MapActivity
                 intent.putExtra("lat", lati);
                 intent.putExtra("lng", log);
 
@@ -182,17 +189,9 @@ public class Individual extends AppCompatActivity {
                 howThisfeel.setText("Liked it");
             }
         });
-        stars5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stars1.setImageResource(R.drawable.ic_star);
-                stars2.setImageResource(R.drawable.ic_star);
-                stars3.setImageResource(R.drawable.ic_star);
-                stars4.setImageResource(R.drawable.ic_star);
-                stars5.setImageResource(R.drawable.ic_star);
-                howThisfeel.setText("Loved it");
-            }
-        });
+        //for displaying profile photo
+        String url=firebaseAuth.getCurrentUser().getPhotoUrl().toString();
+        Picasso.with(Individual.this).load(url).into(imgprofpik);
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -210,30 +209,9 @@ public class Individual extends AppCompatActivity {
                 }
             }
         });
-        // BELOW DATA TO ACCESS FIREBASE DATA IN OUR APP
-        root= FirebaseDatabase.getInstance().getReference().child("info");
-        DatabaseReference root1=root.child("bs");
-        DatabaseReference roots=root1.child("1");
-        roots.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String texts=dataSnapshot.getValue().toString();
-                tvAbout.setText(texts);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
     }
 
-
-
-
-
-
-    @Override
+        @Override
     public boolean onSupportNavigateUp() {
         finish();
         return true;

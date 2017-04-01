@@ -16,6 +16,8 @@ public class profile extends AppCompatActivity {
     ImageView profPik;
     FirebaseAuth firebaseAuth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,10 @@ public class profile extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Profile");
 
+
         profPik=(ImageView)findViewById(R.id.profilePik);
+        String url=firebaseAuth.getCurrentUser().getPhotoUrl().toString();
+        Picasso.with(profile.this).load(url).centerCrop().resize(140,140).into(profPik);
         tvEmail.setText(firebaseAuth.getCurrentUser().getEmail());
         tvName.setText(firebaseAuth.getCurrentUser().getDisplayName());
     }

@@ -10,9 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -62,23 +63,21 @@
         android:layout_height="140dp"
         android:background="@drawable/ic_circle_filled"
         app:civ_border_color="#000000"
-        app:civ_border_width="2dp"
+        app:civ_border_width="0.5dp"
         app:civ_shadow="true"
-        app:civ_shadow_radius="10"
-        app:civ_shadow_color="#8BC34A"
+        app:civ_shadow_radius="30"
+        app:civ_shadow_color="#989898"
         android:id="@+id/profilePik"
-        android:layout_marginBottom="11dp"
-        android:layout_alignBottom="@+id/textViewName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignTop="@+id/floatingActionButton" />
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_edit"
             android:id="@+id/floatingActionButton"
-            android:layout_alignTop="@+id/circularImageView"
+            android:layout_above="@+id/textViewFav"
             android:layout_alignRight="@+id/textViewFav"
-            android:layout_alignEnd="@+id/textViewFav" />
+            android:layout_alignEnd="@+id/textViewFav"
+            android:layout_marginBottom="18dp" />
         <!--UPPER CONTENT FOR PROFILE PIK AND DETAILS-->
         <TextView
             android:layout_width="wrap_content"
