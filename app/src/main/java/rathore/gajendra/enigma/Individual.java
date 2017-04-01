@@ -8,20 +8,15 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Iterator;
 
 
 public class Individual extends AppCompatActivity {
@@ -46,7 +41,7 @@ public class Individual extends AppCompatActivity {
         String title = getIntent().getExtras().getString("name");
         toolbar.setTitle(title);
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);
-        appBarLayout.setBackgroundResource(R.drawable.bs_two);
+        appBarLayout.setBackgroundResource(R.drawable.bs);
         imgprofpik = (ImageView) findViewById(R.id.profilepikIndividual);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(title);
@@ -55,6 +50,7 @@ public class Individual extends AppCompatActivity {
         tv_name = (TextView) findViewById(R.id.tv_name_individual);
         tvAbout = (TextView) findViewById(R.id.tv_about);
         tv_name.setText(firebaseAuth.getCurrentUser().getDisplayName());
+
         final ImageView stars1, stars2, stars3, stars4, stars5;
         stars1 = (ImageView) findViewById(R.id.star1);
         stars2 = (ImageView) findViewById(R.id.star2);
@@ -231,6 +227,10 @@ public class Individual extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 
 
     @Override

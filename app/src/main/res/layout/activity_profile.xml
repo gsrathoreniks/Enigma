@@ -153,7 +153,7 @@
             <ImageView
                 android:layout_width="260dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/bs_two"
+                android:src="@drawable/bs"
                 android:scaleType="fitXY"
                 android:layout_marginRight="5dp"/>
             <ImageView
@@ -225,7 +225,7 @@
                     <ImageView
                         android:layout_width="260dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/bs_two"
+                        android:src="@drawable/bs"
                         android:scaleType="fitXY"
                         android:layout_marginRight="5dp"/>
                     <ImageView

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="rathore.gajendra.enigma.HomePage"
+    tools:context="rathore.gajendra.enigma.Wildlife"
     android:orientation="vertical"
     tools:showIn="@layout/app_bar_home_page">
     <ScrollView
@@ -19,7 +19,7 @@
             android:orientation="vertical">
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
+                android:layout_height="220dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
@@ -27,33 +27,33 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/aralam_ws"
                     android:id="@+id/back_img1"
                     android:scaleType="fitXY"/>
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/ic_favorite_border_black_24d"
                     android:layout_gravity="end"
                     android:id="@+id/img1"
                     android:layout_margin="3dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="55dp"
                     android:layout_gravity="bottom"
                     android:layout_margin="2dp"
                     android:orientation="vertical"
-                    android:background="#b1000000">
+                    android:background="#b1313030">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv1"
                         android:gravity="center_vertical"
-                        android:text="Jim Corbett National Park"
+                        android:text="Aralam Wildlife Sanctuary"
                         android:textColor="#ffffff"
                         android:paddingLeft="5dp"
-                        android:textSize="16dp"/>
+                        android:textSize="18dp"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -65,13 +65,14 @@
                             android:textColor="#ffffff"
                             android:paddingLeft="5dp"
                             android:gravity="center_vertical"
-                            android:text="State : Uttarakhand"/>
+                            android:textSize="14dp"
+                            android:text="State : Kerala"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
+                android:layout_height="220dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
@@ -92,20 +93,20 @@
                     android:layout_margin="3dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="55dp"
                     android:layout_gravity="bottom"
                     android:layout_margin="2dp"
                     android:orientation="vertical"
-                    android:background="#b1000000">
+                    android:background="#b1313030">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv2"
                         android:gravity="center_vertical"
-                        android:text="Jim Corbett National Park"
+                        android:text="Aralam Wildlife Sanctuary"
                         android:textColor="#ffffff"
                         android:paddingLeft="5dp"
-                        android:textSize="16dp"/>
+                        android:textSize="18dp"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -117,7 +118,8 @@
                             android:textColor="#ffffff"
                             android:paddingLeft="5dp"
                             android:gravity="center_vertical"
-                            android:text="State : Uttarakhand"/>
+                            android:textSize="14dp"
+                            android:text="State : Kerala"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -131,7 +133,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img3"
                     android:scaleType="fitXY"/>
 
@@ -183,7 +185,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img4"
                     android:scaleType="fitXY"/>
 
@@ -235,7 +237,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img5"
                     android:scaleType="fitXY"/>
 
@@ -287,7 +289,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img6"
                     android:scaleType="fitXY"/>
 
@@ -339,7 +341,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img7"
                     android:scaleType="fitXY"/>
 
@@ -391,7 +393,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img8"
                     android:scaleType="fitXY"/>
 
@@ -443,7 +445,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img9"
                     android:scaleType="fitXY"/>
 
@@ -495,7 +497,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img10"
                     android:scaleType="fitXY"/>
 
@@ -547,7 +549,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img11"
                     android:scaleType="fitXY"/>
 
@@ -599,7 +601,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img12"
                     android:scaleType="fitXY"/>
 
@@ -651,7 +653,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img13"
                     android:scaleType="fitXY"/>
 
@@ -703,7 +705,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img14"
                     android:scaleType="fitXY"/>
 
@@ -755,7 +757,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bs_two"
+                    android:src="@drawable/bs"
                     android:id="@+id/back_img15"
                     android:scaleType="fitXY"/>
 
