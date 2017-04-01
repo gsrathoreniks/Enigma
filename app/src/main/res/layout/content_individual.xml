@@ -94,13 +94,12 @@
                 android:background="@drawable/rect_back"/>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tv_about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:layout_gravity="center_horizontal"
-                android:padding="8dp"
-                android:text="About : \n \n \n \n  \n Flora n Fauna :\n\n\n\n\n\n\n\n" />
+                android:padding="8dp"/>
 
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView

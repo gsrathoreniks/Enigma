@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.formats.NativeAd;
 import com.google.firebase.auth.FirebaseAuth;
+import com.squareup.picasso.Picasso;
 
 public class profile extends AppCompatActivity {
     TextView tvEmail;
