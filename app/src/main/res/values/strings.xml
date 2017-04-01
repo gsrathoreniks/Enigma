@@ -13,5 +13,7 @@
     <string name="title_activity_locate_place">Map</string>
     <string name="google_maps_key">AIzaSyBjtVDhMSL6DJ0cQoG4BgZpbjVfUtMlLL0</string>
     <string name="title_activity_individual">Individual</string>
+    <string name="title_activity_tabbed_home">Tabbed_home</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>

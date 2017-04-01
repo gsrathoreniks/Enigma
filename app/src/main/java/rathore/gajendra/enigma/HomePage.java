@@ -508,6 +508,12 @@ public class HomePage extends AppCompatActivity
             Intent d = new Intent(this, feedback.class);
             startActivity(d);
         }
+        if (id == R.id.nav_bookRide) {
+            // Handles the Location of the user.
+            Intent d = new Intent(this, Tabbed_home.class);
+            startActivity(d);
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
