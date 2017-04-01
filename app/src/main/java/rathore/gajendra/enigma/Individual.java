@@ -14,11 +14,19 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Iterator;
 
 
 public class Individual extends AppCompatActivity {
     int a=0;
     ImageView imgHotel;
+    TextView about;
     ImageView imgCafe;
     ImageView imgHospital;
     ImageView imgRestaurant;
@@ -27,17 +35,25 @@ public class Individual extends AppCompatActivity {
     TextView tv_name;
     ImageView imgprofpik;
     FirebaseAuth firebaseAuth;
+
+    DatabaseReference root;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_individual);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+
+
+
         String title=getIntent().getExtras().getString("name");
         toolbar.setTitle(title);
         AppBarLayout appBarLayout=(AppBarLayout)findViewById(R.id.app_bar);
         appBarLayout.setBackgroundResource(R.drawable.bs_two);
-
+        about = (TextView)findViewById(R.id.textView6);
         imgprofpik=(ImageView)findViewById(R.id.profilepikIndividual);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(title);
@@ -103,6 +119,8 @@ public class Individual extends AppCompatActivity {
                 startActivity(abc);
             }
         });
+
+
         //Map
 
         TextView take =(TextView) findViewById(R.id.takemethere);
@@ -122,12 +140,12 @@ public class Individual extends AppCompatActivity {
 
                 Intent intent = new Intent(getBaseContext(), MapsActivity.class);
 
-                // Passing latitude and longitude to the MapActiv
+                // Passing latitude and longitude to the MapActivity
                 intent.putExtra("lat",lati);
                 intent.putExtra("lng",log);
 
                 startActivity(intent);
-
+//Map Over
 
             }
         });
@@ -207,6 +225,9 @@ public class Individual extends AppCompatActivity {
             }
         });
     }
+
+
+
 
     @Override
     public boolean onSupportNavigateUp() {

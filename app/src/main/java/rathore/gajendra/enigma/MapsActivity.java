@@ -36,7 +36,7 @@ public class MapsActivity extends FragmentActivity  implements OnMapReadyCallbac
         options.snippet("Latitude:" + latitude + ",Longitude:" + longitude);
 
         SupportMapFragment fm = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        fm.getMapAsync((OnMapReadyCallback) this);
+        fm.getMapAsync(this);
 
 // Getting reference to google map
 
@@ -45,7 +45,7 @@ public class MapsActivity extends FragmentActivity  implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         googleMap.addMarker(options);
 
