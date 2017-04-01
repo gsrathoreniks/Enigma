@@ -16,6 +16,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:paddingBottom="30dp"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="match_parent"
@@ -65,10 +66,11 @@
         app:civ_shadow="true"
         app:civ_shadow_radius="10"
         app:civ_shadow_color="#8BC34A"
-        android:id="@+id/circularImageView"
-        android:layout_alignBottom="@+id/textViewEmail"
-        android:layout_alignLeft="@+id/cardViewFav"
-        android:layout_alignStart="@+id/cardViewFav"/>
+        android:id="@+id/profilePik"
+        android:layout_marginBottom="11dp"
+        android:layout_alignBottom="@+id/textViewName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,10 +83,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="9766227508"
+            android:text="9881029531"
             android:textSize="16dp"
             android:layout_marginLeft="9dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="305dp"
             android:id="@+id/textViewContact"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -98,17 +100,99 @@
             android:layout_alignParentTop="true"
             android:textSize="16dp"
             android:layout_marginLeft="9dp"
-            android:layout_marginTop="260dp"
-            android:text="sakshi25amrutkar@gmail.com" />
+            android:layout_marginTop="285dp" />
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="265dp" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/cardViewFav"
+        android:layout_below="@+id/textViewContact">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#e2dfdf">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:text="Favourites"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bs_one"
+                android:scaleType="fitXY"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bs_two"
+                android:scaleType="fitXY"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bs_three"
+                android:scaleType="fitXY"
+                android:layout_marginRight="5dp"/>
+        </LinearLayout>
+        </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#e2dfdf"
+            android:layout_gravity="bottom">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="VIEW ALL"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="215dp"
-            android:layout_marginTop="5dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_centerVertical="true"
-            android:id="@+id/cardViewFav"
-            android:layout_below="@+id/textViewContact">
+            android:id="@+id/cardViewRecent"
+            android:layout_below="@+id/cardViewFav">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -118,7 +202,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:textAllCaps="true"
-                    android:text="Favourites"
+                    android:text="RECENTLY VISITED"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="5dp"/>
             </LinearLayout>
@@ -158,7 +242,6 @@
                 android:background="#e2dfdf"
                 android:layout_gravity="bottom">
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center_vertical"
@@ -168,9 +251,8 @@
 
             </LinearLayout>
 
-
         </android.support.v7.widget.CardView>
-
+       
     </RelativeLayout>
-        </ScrollView>
-    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

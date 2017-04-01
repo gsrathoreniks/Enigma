@@ -19,7 +19,7 @@
             android:layout_margin="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:orientation="vertical"
                 android:gravity="center_vertical">
                 <LinearLayout
@@ -49,11 +49,33 @@
                         android:text="Area  : "
                         android:textAlignment="viewEnd"/>
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="10 kmsq"
                         android:paddingLeft="5dp"
                         android:id="@+id/tv_area"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26.5775"
+                    android:id="@+id/e_lat"
+                    android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="93.1711"
+                        android:id="@+id/e_lng"
+                        android:visibility="gone"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -119,6 +141,7 @@
                 android:text="VIEW MAP"
                 android:padding="8dp"
                 android:gravity="center"
+                android:id="@+id/takemethere"
                 android:textColor="#ffffff"
                 android:background="#b3000000"
                 android:layout_gravity="bottom"/>
@@ -154,6 +177,7 @@
                         android:layout_height="match_parent"
                         android:padding="28dp"
                         android:src="@drawable/ic_cafe"
+                        android:id="@+id/cafeVeiw"
                         android:layout_weight="1"
                         android:background="@drawable/ic_circle_filled"/>
                     <ImageView
@@ -162,12 +186,14 @@
                         android:padding="28dp"
                         android:src="@drawable/ic_restaurant"
                         android:layout_weight="1"
+                        android:id="@+id/restraurantVeiw"
                         android:background="@drawable/ic_circle_filled"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_hotel"
                         android:layout_weight="1"
+                        android:id="@+id/hotelView"
                         android:paddingLeft="28dp"
                         android:paddingRight="28dp"
                         android:background="@drawable/ic_circle_filled"/>
@@ -207,6 +233,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:padding="28dp"
+                        android:id="@+id/hospitalVeiw"
                         android:src="@drawable/ic_hospital"
                         android:background="@drawable/ic_circle_filled"/>
                     <ImageView
@@ -214,6 +241,7 @@
                         android:layout_height="100dp"
                         android:src="@drawable/ic_money"
                         android:paddingLeft="28dp"
+                        android:id="@+id/atmVeiw"
                         android:paddingRight="28dp"
                         android:background="@drawable/ic_circle_filled"/>
                 </LinearLayout>
@@ -251,13 +279,14 @@
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
+                android:id="@+id/profilepikIndividual"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 android:src="@drawable/bs_one"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Prajakta Awaghade"
+                android:id="@+id/tv_name_individual"
                 android:textAlignment="center"
                 android:layout_marginTop="5dp"/>
 
@@ -300,14 +329,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Awesome"
+                    android:id="@+id/howsThis"
                     android:textAlignment="center"/>
+
                 <EditText
+                    android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:hint="  Tell us what you think !!!"/>
+                    android:hint="  Tell us what you think !!!" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

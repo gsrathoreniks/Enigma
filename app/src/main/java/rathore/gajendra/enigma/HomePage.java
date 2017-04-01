@@ -1,20 +1,30 @@
 package rathore.gajendra.enigma;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.CardView;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ImageView;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.support.design.widget.FloatingActionButton;
+        import android.support.design.widget.Snackbar;
+        import android.support.v7.widget.CardView;
+        import android.view.View;
+        import android.support.design.widget.NavigationView;
+        import android.support.v4.view.GravityCompat;
+        import android.support.v4.widget.DrawerLayout;
+        import android.support.v7.app.ActionBarDrawerToggle;
+        import android.support.v7.app.AppCompatActivity;
+        import android.support.v7.widget.Toolbar;
+        import android.view.Menu;
+        import android.view.MenuItem;
+        import android.widget.ImageView;
+        import android.widget.Toast;
+
+        import com.google.android.gms.ads.formats.NativeAd;
+        import com.google.android.gms.games.internal.GamesContract;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+
+        import java.util.HashMap;
+        import java.util.Map;
 
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +44,8 @@ public class HomePage extends AppCompatActivity
     ImageView img14;
     ImageView img15;
     CardView cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10,cv11,cv12,cv13,cv14,cv15;
+    FirebaseAuth firebaseAuth;
+    DatabaseReference root;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +100,9 @@ public class HomePage extends AppCompatActivity
         img13=(ImageView)findViewById(R.id.img13);
         img14=(ImageView)findViewById(R.id.img14);
         img15=(ImageView)findViewById(R.id.img15);
+
+
+
         //onclick listeners for FAVOURITES
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -485,38 +500,19 @@ public class HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_explore) {
-            // Handles the Location of the user.
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            Intent d = new Intent(this, Weather.class);
-            startActivity(d);
-
-        }
-        if (id == R.id.nav_profile) {
-            // Handles the Location of the user.
-            Intent d = new Intent(this, Login.class);
-            startActivity(d);
-        }
-        if (id == R.id.nav_favourites) {
-            // Handles the Location of the user.
-            Intent d = new Intent(this, profile.class);
-            startActivity(d);
-        }
-        if (id == R.id.nav_visited) {
-            // Handles the Location of the user.
-            Intent d = new Intent(this, feedback.class);
-            startActivity(d);
-        }
-        if (id == R.id.nav_bookRide) {
-            // Handles the Location of the user.
-            Intent d = new Intent(this, Tabbed_home.class);
-            startActivity(d);
-        }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void onProfClick(View v){
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        startActivity(new Intent(HomePage.this, profile.class));
+    }
+    public void onFeedbackClick(View v){
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        startActivity(new Intent(HomePage.this, feedback.class));
     }
 }

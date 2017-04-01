@@ -1,5 +1,6 @@
 package rathore.gajendra.enigma;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -7,10 +8,25 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class Individual extends AppCompatActivity {
     int a=0;
+    ImageView imgHotel;
+    ImageView imgCafe;
+    ImageView imgHospital;
+    ImageView imgRestaurant;
+    ImageView imgAtm;
+    TextView howThisfeel;
+    TextView tv_name;
+    ImageView imgprofpik;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +37,14 @@ public class Individual extends AppCompatActivity {
         toolbar.setTitle(title);
         AppBarLayout appBarLayout=(AppBarLayout)findViewById(R.id.app_bar);
         appBarLayout.setBackgroundResource(R.drawable.bs_two);
-        setTitle(title);
 
+        imgprofpik=(ImageView)findViewById(R.id.profilepikIndividual);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle(title);
+        firebaseAuth=FirebaseAuth.getInstance();
+        howThisfeel=(TextView)findViewById(R.id.howsThis);
+        tv_name=(TextView)findViewById(R.id.tv_name_individual);
+        tv_name.setText(firebaseAuth.getCurrentUser().getDisplayName());
         final ImageView stars1,stars2,stars3,stars4,stars5;
         stars1=(ImageView)findViewById(R.id.star1);
         stars2=(ImageView)findViewById(R.id.star2);
@@ -30,10 +52,95 @@ public class Individual extends AppCompatActivity {
         stars4=(ImageView)findViewById(R.id.star4);
         stars5=(ImageView)findViewById(R.id.star5);
 
+
+        imgHotel=(ImageView)findViewById(R.id.hotelView);
+        imgHotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent abc=new Intent(Individual.this,socio_conomic.class);
+                abc.putExtra("place","hotel");
+                startActivity(abc);
+            }
+        });
+        imgCafe=(ImageView)findViewById(R.id.cafeVeiw);
+        imgCafe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent abc=new Intent(Individual.this,socio_conomic.class);
+                abc.putExtra("place","cafe");
+                startActivity(abc);
+            }
+        });
+        imgHospital=(ImageView)findViewById(R.id.hospitalVeiw);
+        imgHospital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent abc=new Intent(Individual.this,socio_conomic.class);
+                abc.putExtra("place","hospital");
+                startActivity(abc);
+            }
+        });
+        imgRestaurant=(ImageView)findViewById(R.id.restraurantVeiw);
+        imgRestaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent abc=new Intent(Individual.this,socio_conomic.class);
+                abc.putExtra("place","restaurant");
+                startActivity(abc);
+            }
+        });
+        imgAtm=(ImageView)findViewById(R.id.atmVeiw);
+        imgAtm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent abc=new Intent(Individual.this,socio_conomic.class);
+                abc.putExtra("place","atm");
+                startActivity(abc);
+            }
+        });
+        //Map
+
+        TextView take =(TextView) findViewById(R.id.takemethere);
+         final TextView lat= (TextView)findViewById(R.id.e_lat);
+        final TextView lng= (TextView)findViewById(R.id.e_lng);
+
+        take.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                double lati ;
+                double log;
+
+               lati  = Double.parseDouble(lat.getText().toString());
+                log  = Double.parseDouble(lng.getText().toString());
+
+
+                Intent intent = new Intent(getBaseContext(), MapsActivity.class);
+
+                // Passing latitude and longitude to the MapActiv
+                intent.putExtra("lat",lati);
+                intent.putExtra("lng",log);
+
+                startActivity(intent);
+
+
+            }
+        });
+
         stars1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stars1.setImageResource(R.drawable.ic_star);
+                stars2.setImageResource(R.drawable.ic_star_border);
+                stars3.setImageResource(R.drawable.ic_star_border);
+                stars4.setImageResource(R.drawable.ic_star_border);
+                stars5.setImageResource(R.drawable.ic_star_border);
+                howThisfeel.setText("Hated it");
             }
         });
         stars2.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +148,10 @@ public class Individual extends AppCompatActivity {
             public void onClick(View v) {
                 stars1.setImageResource(R.drawable.ic_star);
                 stars2.setImageResource(R.drawable.ic_star);
+                stars3.setImageResource(R.drawable.ic_star_border);
+                stars4.setImageResource(R.drawable.ic_star_border);
+                stars5.setImageResource(R.drawable.ic_star_border);
+                howThisfeel.setText("Disliked it");
             }
         });
         stars3.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +160,9 @@ public class Individual extends AppCompatActivity {
                 stars1.setImageResource(R.drawable.ic_star);
                 stars2.setImageResource(R.drawable.ic_star);
                 stars3.setImageResource(R.drawable.ic_star);
+                stars4.setImageResource(R.drawable.ic_star_border);
+                stars5.setImageResource(R.drawable.ic_star_border);
+                howThisfeel.setText("It's OK");
 
             }
         });
@@ -59,6 +173,8 @@ public class Individual extends AppCompatActivity {
                 stars2.setImageResource(R.drawable.ic_star);
                 stars3.setImageResource(R.drawable.ic_star);
                 stars4.setImageResource(R.drawable.ic_star);
+                stars5.setImageResource(R.drawable.ic_star_border);
+                howThisfeel.setText("Liked it");
             }
         });
         stars5.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +185,7 @@ public class Individual extends AppCompatActivity {
                 stars3.setImageResource(R.drawable.ic_star);
                 stars4.setImageResource(R.drawable.ic_star);
                 stars5.setImageResource(R.drawable.ic_star);
+                howThisfeel.setText("Loved it");
             }
         });
 
@@ -90,4 +207,11 @@ public class Individual extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
+
 }
