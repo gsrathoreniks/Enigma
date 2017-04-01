@@ -66,14 +66,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="26.5775"
+                    android:text="11.87878"
                     android:id="@+id/e_lat"
                     android:visibility="gone"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="93.1711"
+                        android:text="75.88864"
                         android:id="@+id/e_lng"
                         android:visibility="gone"/>
                 </LinearLayout>

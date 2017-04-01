@@ -82,7 +82,7 @@
                 android:layout_height="90dp"
                 android:textColor="#ffffff"
                 android:background="@drawable/circle_for_feedback"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="20dp"
                 android:padding="25dp"
                 android:id="@+id/btnReviewSubmit"
                 android:src="@drawable/ic_check"

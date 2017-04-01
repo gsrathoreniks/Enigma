@@ -36,7 +36,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Wildlife"
+            android:name=".Wildlife_drawer"
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
@@ -77,7 +77,9 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".HomePage"></activity>
+        <activity android:name=".HomePage" />
+        <activity android:name=".National" />
+        <activity android:name=".Bird_Sanctuaries"></activity>
     </application>
 
 </manifest>

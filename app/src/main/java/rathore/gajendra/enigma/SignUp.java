@@ -104,7 +104,7 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()!=null){
-                    startActivity(new Intent(SignUp.this,Wildlife.class));
+                    startActivity(new Intent(SignUp.this,Wildlife_drawer.class));
                 }
             }
         };

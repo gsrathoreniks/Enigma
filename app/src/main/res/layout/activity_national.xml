@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_home_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="rathore.gajendra.enigma.Wildlife_drawer"
-    android:orientation="vertical"
-    tools:showIn="@layout/app_bar_home_page">
+    tools:context="rathore.gajendra.enigma.National">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -21,13 +16,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:layout_marginTop="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:id="@+id/cv1">
+                android:id="@+id/cv11">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/aralam_ws"
+                    android:src="@drawable/gir_np"
                     android:id="@+id/back_img1"
                     android:scaleType="fitXY"/>
 
@@ -36,13 +29,14 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_favorite_border_black_24d"
                     android:layout_gravity="end"
-                    android:id="@+id/img1"
+                    android:id="@+id/img11"
                     android:layout_margin="3dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_gravity="bottom"
                     android:layout_margin="2dp"
+                    android:paddingBottom="2dp"
                     android:orientation="vertical"
                     android:background="#b1313030">
                     <TextView
@@ -50,7 +44,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/tv1"
                         android:gravity="center_vertical"
-                        android:text="Aralam Wildlife Sanctuary"
+                        android:text="Gir National Park"
                         android:textColor="#ffffff"
                         android:paddingLeft="5dp"
                         android:textSize="18dp"/>
@@ -66,7 +60,7 @@
                             android:paddingLeft="5dp"
                             android:gravity="center_vertical"
                             android:textSize="14dp"
-                            android:text="State : Kerala"/>
+                            android:text="State : Gujarat"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -74,13 +68,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:layout_marginTop="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:id="@+id/cv2">
+                android:id="@+id/cv22">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/parambikulam_ws"
+                    android:src="@drawable/bandipur_np"
                     android:id="@+id/back_img2"
                     android:scaleType="fitXY"/>
 
@@ -89,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_favorite_border_black_24d"
                     android:layout_gravity="end"
-                    android:id="@+id/img2"
+                    android:id="@+id/img22"
                     android:layout_margin="3dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -103,60 +95,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/tv2"
                         android:gravity="center_vertical"
-                        android:text="Parambikulam Wildlife Sanctuary"
-                        android:textColor="#ffffff"
-                        android:paddingLeft="5dp"
-                        android:textSize="18dp"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:textColor="#ffffff"
-                            android:paddingLeft="5dp"
-                            android:gravity="center_vertical"
-                            android:textSize="14dp"
-                            android:text="State : Kerala"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:id="@+id/cv3">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/dandeli_ws"
-                    android:id="@+id/back_img3"
-                    android:scaleType="fitXY"/>
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_favorite_border_black_24d"
-                    android:layout_gravity="end"
-                    android:id="@+id/img3"
-                    android:layout_margin="3dp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_gravity="bottom"
-                    android:layout_margin="2dp"
-                    android:orientation="vertical"
-                    android:background="#b1313030">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv3"
-                        android:gravity="center_vertical"
-                        android:text="Dandeli Wildlife Sanctuary"
+                        android:text="Bandipur National Park"
                         android:textColor="#ffffff"
                         android:paddingLeft="5dp"
                         android:textSize="18dp"/>
@@ -180,14 +119,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:layout_marginTop="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:id="@+id/cv4">
+                android:id="@+id/cv33">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/wayanad_ws"
-                    android:id="@+id/back_img4"
+                    android:src="@drawable/ranthambore_np"
+                    android:id="@+id/back_img3"
                     android:scaleType="fitXY"/>
 
                 <ImageView
@@ -195,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_favorite_border_black_24d"
                     android:layout_gravity="end"
-                    android:id="@+id/img4"
+                    android:id="@+id/img33"
                     android:layout_margin="3dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -207,9 +144,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv4"
+                        android:id="@+id/tv3"
                         android:gravity="center_vertical"
-                        android:text="Wayanad Wildlife Sanctuary"
+                        android:text="Ranthambore National Park"
                         android:textColor="#ffffff"
                         android:paddingLeft="5dp"
                         android:textSize="18dp"/>
@@ -225,11 +162,64 @@
                             android:paddingLeft="5dp"
                             android:gravity="center_vertical"
                             android:textSize="14dp"
-                            android:text="State : Kerala"/>
+                            android:text="State : Rajasthan"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:id="@+id/cv44">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jimcorbett_np"
+                    android:id="@+id/back_img4"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_favorite_border_black_24d"
+                    android:layout_gravity="end"
+                    android:id="@+id/img44"
+                    android:layout_margin="3dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="2dp"
+                    android:orientation="vertical"
+                    android:background="#b1313030">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv4"
+                        android:gravity="center_vertical"
+                        android:text="Jim Corbett National Park"
+                        android:textColor="#ffffff"
+                        android:paddingLeft="5dp"
+                        android:textSize="18dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="#ffffff"
+                            android:paddingLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:textSize="14dp"
+                            android:text="State : Uttarakhand"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</RelativeLayout>

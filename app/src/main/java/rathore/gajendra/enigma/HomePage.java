@@ -24,9 +24,10 @@ public class HomePage extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomePage.this,Wildlife.class));
+                startActivity(new Intent(HomePage.this,Wildlife_drawer.class));
             }
         });
+
 
 
 

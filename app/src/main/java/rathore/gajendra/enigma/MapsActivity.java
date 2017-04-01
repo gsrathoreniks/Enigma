@@ -32,7 +32,7 @@ public class MapsActivity extends FragmentActivity  implements OnMapReadyCallbac
 
         options = new MarkerOptions();
         options.position(position);
-        options.title("Kaziranga National Park");
+        options.title("Aralam Wildlife Sanctuary");
         options.snippet("Latitude:" + latitude + ",Longitude:" + longitude);
 
         SupportMapFragment fm = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -45,7 +45,7 @@ public class MapsActivity extends FragmentActivity  implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
         googleMap.addMarker(options);
 
