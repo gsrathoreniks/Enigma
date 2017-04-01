@@ -27,7 +27,6 @@ public class Weather extends AppCompatActivity {
     private String TAG = Weather.class.getSimpleName();
     String url;
     String id;
-    String next_page_token;
     TextView tv_temp;
 
     ArrayList<HashMap<String, String>> contactList;
