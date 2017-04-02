@@ -49,7 +49,6 @@ public class Individual extends AppCompatActivity {
         String title = getIntent().getExtras().getString("name");
         toolbar.setTitle(title);
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);
-        appBarLayout.setBackgroundResource(R.drawable.bs_two);
         imgprofpik = (ImageView) findViewById(R.id.profilepikIndividual);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(title);

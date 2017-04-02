@@ -7,21 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.facebook.CallbackManager;
-import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -74,21 +69,37 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 final String emails=email.getText().toString();
                 String passs=password.getText().toString();
-                final ProgressDialog progressDialog=ProgressDialog.show(Login.this,"Signing in","Authenticating",true);
-                (firebaseAuth.signInWithEmailAndPassword(emails,passs)).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        if(task.isSuccessful()){
-                            startActivity(new Intent(Login.this,HomePage.class));
-                        }
-                        else{
-                            email.setText("");
-                            password.setText("");
-                            Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                        }
+                if(email.getText().toString().equals("")){
+                    if(password.getText().toString().equals("")){
+                        Toast.makeText(Login.this, "Please enter your Details", Toast.LENGTH_SHORT).show();
                     }
-                });
+                    else
+                        Toast.makeText(Login.this, "Please enter your Email", Toast.LENGTH_SHORT).show();
+                }
+                else if(password.getText().toString().equals("")){
+                    if(email.getText().toString().equals("")){
+                        Toast.makeText(Login.this, "Please enter your Details", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                        Toast.makeText(Login.this, "Please enter your Password", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    final ProgressDialog progressDialog=ProgressDialog.show(Login.this,"Signing in","Authenticating",true);
+                    (firebaseAuth.signInWithEmailAndPassword(emails,passs)).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressDialog.dismiss();
+                            if(task.isSuccessful()){
+                                startActivity(new Intent(Login.this,HomePage.class));
+                            }
+                            else{
+                                email.setText("");
+                                password.setText("");
+                                Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
             }
         });
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -158,7 +169,7 @@ public class Login extends AppCompatActivity {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
                     public void onComplete(@NonNull Task<AuthResult> task){
-                        Log.d(TAG,"signInWithCredential:onCoplete:"+task.isSuccessful());
+                        Log.d(TAG,"signInWithCredential:onComplete:"+task.isSuccessful());
                         if(!task.isSuccessful()){
                             Log.w(TAG,"signInWithCredential",task.getException());
                             Toast.makeText(Login.this,"Authentication Failed.",

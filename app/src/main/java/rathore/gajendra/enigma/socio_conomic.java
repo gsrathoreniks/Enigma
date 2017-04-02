@@ -64,7 +64,7 @@ public class socio_conomic extends AppCompatActivity {
             HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
             String a="https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
-            String b="+in+Lonavala&key=AIzaSyB0ClF8D7rlOlLPgFH5SeAY3RGfgRGEXVA";
+            String b="+in+cochin&key=AIzaSyB0ClF8D7rlOlLPgFH5SeAY3RGfgRGEXVA";
             url=a.concat(getIntent().getExtras().getString("place")).concat(b);
             String jsonStr = sh.makeServiceCall(url);
 

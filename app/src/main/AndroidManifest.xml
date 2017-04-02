@@ -52,11 +52,6 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SignUp" />
         <activity android:name=".MainActivity">
@@ -79,7 +74,16 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".HomePage" />
         <activity android:name=".National" />
-        <activity android:name=".Bird_Sanctuaries"></activity>
+        <activity android:name=".Bird_Sanctuaries" />
+        <activity android:name=".oneTimeView">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
