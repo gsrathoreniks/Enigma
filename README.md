@@ -1,15 +1,12 @@
 # Enigma
 App to map Wildlife Sanctuaries/National Parks/Birds sanctuaries with travel info for Hackathon 2k17
 
-# Pending Work
-- [x] Login page
-- [x] Signup page
-- [ ] Splash screen
-- [x] Profile page
-- [x] Feedback page
-- [ ] Home page(with tabbed activity)
-- [x] Individual page(for each N.P./W.S./B.S.)
-- [ ] Favourites page
-- [ ] Map(to show/map N.P./W.S./B.S.)
-- [ ] Book a ride page(using OLA/UBER api)
-AND A LOT MORE... :)
+
+## Authors
+
+* **Gajendra Singh Rathore** - [gsrathoreniks](https://github.com/gsrathoreniks)
+* **Prajakta Awaghade** - [prajakta987](https://github.com/prajakta987)
+* **Avinash Singh** - [Avi1411](https://github.com/Avi1411)
+* **Sakshi Amrutkar** - [sakhsi-amrutkar](https://github.com/sakshi-amrutkar)
+* **Anjali Bhatt** - [anjali-bhatt](https://github.com/anjali-bhatt)
+* **Amit Birthalia** - [abirthalia](https://github.com/abirthalia)
